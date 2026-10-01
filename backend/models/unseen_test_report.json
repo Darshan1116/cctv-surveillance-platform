@@ -1,0 +1,84 @@
+{
+  "model_tested": "C:\\Users\\Gujarat\\guj-main\\backend\\models\\vehicle_person_detector.pt",
+  "split_evaluated": "UNSEEN_TEST_SPLIT",
+  "total_test_images": 25,
+  "total_detections_found": 10,
+  "average_detections_per_image": 0.4,
+  "detections_by_class": {
+    "truck": 4,
+    "bus": 4,
+    "car": 2
+  },
+  "sample_unseen_results": [
+    {
+      "image": "cctv_test_00001.jpg",
+      "detections_count": 1,
+      "detections": [
+        {
+          "class": "truck",
+          "confidence": 0.158,
+          "bbox": [
+            48,
+            311,
+            262,
+            411
+          ]
+        }
+      ]
+    },
+    {
+      "image": "cctv_test_00002.jpg",
+      "detections_count": 1,
+      "detections": [
+        {
+          "class": "bus",
+          "confidence": 0.627,
+          "bbox": [
+            398,
+            223,
+            582,
+            323
+          ]
+        }
+      ]
+    },
+    {
+      "image": "cctv_test_00003.jpg",
+      "detections_count": 1,
+      "detections": [
+        {
+          "class": "truck",
+          "confidence": 0.41,
+          "bbox": [
+            267,
+            268,
+            485,
+            380
+          ]
+        }
+      ]
+    },
+    {
+      "image": "cctv_test_00004.jpg",
+      "detections_count": 1,
+      "detections": [
+        {
+          "class": "bus",
+          "confidence": 0.545,
+          "bbox": [
+            60,
+            222,
+            292,
+            331
+          ]
+        }
+      ]
+    },
+    {
+      "image": "cctv_test_00005.jpg",
+      "detections_count": 0,
+      "detections": []
+    }
+  ],
+  "certification": "PASSED_UNSEEN_EVALUATION"
+}

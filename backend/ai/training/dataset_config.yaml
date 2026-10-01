@@ -1,0 +1,14 @@
+# Dataset configuration for CCTV Vehicle & Person Detection Model
+path: dataset
+train: images/train
+val: images/val
+test: images/test
+
+# Classes: 0: car, 1: motorcycle, 2: bus, 3: truck, 4: auto_rickshaw, 5: person
+names:
+  0: car
+  1: motorcycle
+  2: bus
+  3: truck
+  4: auto_rickshaw
+  5: person

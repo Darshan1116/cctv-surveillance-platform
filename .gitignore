@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Databases & Large Data
+*.db
+*.sqlite
+*.sqlite3
+backend/data/
+simulator/vehicles-nighttime/
+simulator/sample_videos/*.mp4
+
+# Node & Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+*.local
+
+# IDE & OS
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Large datasets
+dataset/videos/
+backend/ai/training/dataset/
+
+# YOLO training outputs
+runs/
+backend/ai/training/runs/
+
+# Model weights
+*.pt
+
+# Dataset cache
+*.cache

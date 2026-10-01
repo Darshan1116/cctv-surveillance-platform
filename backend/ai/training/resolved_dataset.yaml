@@ -1,0 +1,11 @@
+names:
+  0: car
+  1: motorcycle
+  2: bus
+  3: truck
+  4: auto_rickshaw
+  5: person
+path: C:\Users\Gujarat\guj-main\backend\ai\training\dataset
+test: C:\Users\Gujarat\guj-main\backend\ai\training\dataset\images\test
+train: C:\Users\Gujarat\guj-main\backend\ai\training\dataset\images\train
+val: C:\Users\Gujarat\guj-main\backend\ai\training\dataset\images\val

@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # MediaMTX RTSP Server
+  mediamtx:
+    image: bluenviron/mediamtx:latest
+    container_name: cctv_mediamtx
+    ports:
+      - "8554:8554" # RTSP
+      - "1935:1935" # RTMP
+      - "8888:8888" # HLS
+      - "8889:8889" # WebRTC
+    environment:
+      - MTX_PROTOCOLS=tcp
+
+  # Eclipse Mosquitto MQTT Broker
+  mqtt:
+    image: eclipse-mosquitto:2.0
+    container_name: cctv_mqtt
+    ports:
+      - "1883:1883"
+    command: mosquitto -c /mosquitto-no-auth.conf
+
+  # Backend Ingestion & AI Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cctv_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DEMO_MODE=true
+      - MQTT_BROKER=mqtt
+      - MQTT_PORT=1883
+      - DATABASE_PATH=/app/data/cctv_platform.db
+    volumes:
+      - ./backend/data:/app/data
+    depends_on:
+      - mediamtx
+      - mqtt
+
+  # Frontend Dashboard
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cctv_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
